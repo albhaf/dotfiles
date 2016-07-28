@@ -23,7 +23,8 @@ Plugin 'elixir-lang/vim-elixir'
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'vim-scripts/ruby-matchit'
 Plugin 'rust-lang/rust.vim'
-Plugin 'tpope/vim-fugitive'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Bundle 'cespare/vim-toml'
 call vundle#end()
 filetype plugin indent on
@@ -39,6 +40,8 @@ set backspace=2
 set number
 set hidden
 set wildmode=list:longest,full
+set laststatus=2
+set ttimeoutlen=50
 
 set cursorline
 set list
@@ -54,11 +57,10 @@ let NERDTreeQuitOnOpen=1
 " Key mappings
 nnoremap <C-m> :TagbarToggle<CR>
 
-" minbufexpl
-let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplMapWindowNavArrows = 1
-let g:miniBufExplMapCTabSwitchBufs = 1
-let g:miniBufExplModSelTarget = 1
+" Airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_tab_nr = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
 
 " Python
 autocmd FileType python set omnifunc=pythoncomplete#Complete
@@ -94,6 +96,7 @@ set backup
 set backupdir=~/.vim-backup/
 set directory=~/.vim-backup/
 
+" Theme and visuals
 if $COLORTERM == 'gnome-terminal'
   set t_Co=256
 endif
