@@ -1,7 +1,25 @@
 set -gx GOPATH ~
 
-set -gx PATH $GOPATH/bin ~/.cargo/bin ~/.multirust/toolchains/stable/cargo/bin $PATH
+if test -e $GOPATH/bin
+  set -gx PATH $GOPATH/bin $PATH
+end
 
-set PATH $HOME/.rbenv/shims $PATH
-rbenv rehash >/dev/null ^&1
-status --is-interactive; and . (pyenv init -|psub)
+if test -e ~/.cargo/bin
+  set -gx PATH ~/.cargo/bin $PATH
+end
+
+if test -e ~/.multirust/toolchains/stable/cargo/bin
+  set -gx PATH ~/.multirust/toolchains/stable/cargo/bin $PATH
+end
+
+if test -e ~/.rbenv/shims
+  set -gx PATH ~/.rbenv/shims $PATH
+end
+
+if type -q rbenv
+  rbenv rehash >/dev/null ^&1
+end
+
+if type -q pyenv
+  status --is-interactive; and . (pyenv init -|psub)
+end
