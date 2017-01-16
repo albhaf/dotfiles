@@ -5,31 +5,25 @@ endif
 
 " Vundle
 set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'fatih/vim-go'
-Plugin 'majutsushi/tagbar'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'pangloss/vim-javascript'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'joonty/vim-phpqa'
-Plugin 'jimenezrick/vimerl'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'vim-scripts/matchit.zip'
-Plugin 'vim-scripts/ruby-matchit'
-Plugin 'rust-lang/rust.vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Bundle 'cespare/vim-toml'
-call vundle#end()
-filetype plugin indent on
-
-syntax on
+call plug#begin('~/.vim/plugged')
+Plug 'scrooloose/nerdtree'
+Plug 'fatih/vim-go'
+Plug 'majutsushi/tagbar'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'jelera/vim-javascript-syntax'
+Plug 'pangloss/vim-javascript'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'kchmck/vim-coffee-script'
+Plug 'joonty/vim-phpqa'
+Plug 'jimenezrick/vimerl'
+Plug 'elixir-lang/vim-elixir'
+Plug 'vim-scripts/matchit.zip'
+Plug 'vim-scripts/ruby-matchit'
+Plug 'rust-lang/rust.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'cespare/vim-toml'
+call plug#end()
 
 set ofu=syntaxcomplete#Complete
 set smartindent
