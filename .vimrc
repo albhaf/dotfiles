@@ -14,7 +14,6 @@ Plug 'jelera/vim-javascript-syntax'
 Plug 'pangloss/vim-javascript'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'kchmck/vim-coffee-script'
-Plug 'joonty/vim-phpqa'
 Plug 'jimenezrick/vimerl'
 Plug 'elixir-lang/vim-elixir'
 Plug 'vim-scripts/matchit.zip'
@@ -79,11 +78,6 @@ au FileType go nmap <Leader>dt <Plug>(go-def-tab)
 
 " Rust
 let g:rustfmt_autosave = 1
-
-" PHP
-autocmd Filetype php setlocal ts=4 sts=4 sw=4
-let g:phpqa_messdetector_autorun = 0
-let g:phpqa_codesniffer_autorun = 0
 
 " Backup
 set backup
