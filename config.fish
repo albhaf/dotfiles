@@ -1,7 +1,7 @@
 set -gx GOPATH ~
 
-if test -e $GOPATH/bin
-  set -gx PATH $GOPATH/bin $PATH
+if test -e ~/bin
+  set -gx PATH ~/bin $PATH
 end
 
 if test -e ~/.cargo/bin
