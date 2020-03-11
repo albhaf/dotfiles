@@ -23,3 +23,5 @@ end
 if type -q pyenv
   pyenv init - | source
 end
+
+set -gx LLVM "/usr/local/opt/llvm/bin"
