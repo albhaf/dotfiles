@@ -3,6 +3,9 @@ if $SHELL =~ 'bin/fish'
 set shell=/bin/sh
 endif
 
+set encoding=utf-8
+set fileencoding=utf-8
+
 " Vundle
 set nocompatible
 call plug#begin('~/.vim/plugged')
@@ -22,6 +25,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'cespare/vim-toml'
+Plug 'rhysd/vim-clang-format'
 call plug#end()
 
 set ofu=syntaxcomplete#Complete
