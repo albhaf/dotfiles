@@ -17,9 +17,9 @@ if test -e ~/.rbenv/shims
 end
 
 if type -q rbenv
-  rbenv rehash >/dev/null ^&1
+  rbenv rehash >/dev/null
 end
 
 if type -q pyenv
-  status --is-interactive; and . (pyenv init -|psub)
+  pyenv init - | source
 end
