@@ -1,30 +1,10 @@
-[core]
-	excludesfile = /Users/albhaf/.gitignore_global
-	editor = /usr/bin/vim
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Users/albhaf/Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
 [user]
-	name = Albert Hafvenström
-	email = albhaf@gmail.com
-[alias]
-  tree = log --graph --full-history --all --color --date=short --pretty=format:\"%Cred%x09%h %Creset%ad%Cblue%d %Creset %s %C(bold)(%an)%Creset\"
-  ls = "log --color=always --graph --pretty=format:'%C(yellow)%h%Creset%C(cyan)%d%Creset %C(white bold)%s%Creset %C(white dim)(by %an %ar)%Creset' --all"
-  branchcommits = log --no-merges --pretty=oneline --abbrev-commit HEAD
-  amend = commit --amend
-  ff = merge --ff-only
-  cleanup = "!git branch --merged | grep -v '^*\\|master|develop' | xargs -n 1 git branch -d"
-  #cleanup = "!git branch --merged | grep -v '\*\|master\|develop' | xargs -n 1 git branch -d"
-  #cleanup = "!git branch --merged | grep -v \* | grep -v master | grep -v dev | xargs -n 1 git branch -d"
-
-[color]
-	ui = auto
-[http]
-	cookiefile = /Users/albhaf/.gitcookies
+  email = albhaf@gmail.com
+  name = Albert Hafvenström
+[core]
+  precomposeUnicode = true
+  autocrlf = input
 [push]
-	default = simple
-[url "git@bitbucket.org:"]
-	insteadOf = https://bitbucket.org/
+  default = current
+[pull]
+  ff = only
