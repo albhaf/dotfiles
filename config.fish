@@ -33,3 +33,11 @@ if type -q jenv
 end
 
 set -gx LLVM "/usr/local/opt/llvm/bin"
+
+set -gx ANDROID_HOME $HOME/Library/Android/sdk
+set -gx PATH $PATH $ANDROID_HOME/emulator
+set -gx PATH $PATH $ANDROID_HOME/tools
+set -gx PATH $PATH $ANDROID_HOME/tools/bin
+set -gx PATH $PATH $ANDROID_HOME/platform-tools
+
+set -x fish_user_paths (printf '%s\n' $fish_user_paths | sort -u)
