@@ -1,5 +1,9 @@
 set -gx GOPATH ~
 
+if test -e /opt/homebrew/bin
+  set -gx PATH /opt/homebrew/bin $PATH
+end
+
 if test -e ~/bin
   set -gx PATH ~/bin $PATH
 end
