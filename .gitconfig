@@ -4,7 +4,11 @@
 [core]
   precomposeUnicode = true
   autocrlf = input
+  editor = /usr/bin/vim
+  excludesfile = /Users/albhaf/.gitignore_global
 [push]
   default = current
 [pull]
   ff = only
+[url "git@github.com:"]
+  insteadOf = https://github.com/
