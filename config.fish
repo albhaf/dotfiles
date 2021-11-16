@@ -27,4 +27,9 @@ if type -q pyenv
   pyenv init - | source
 end
 
+if type -q jenv
+  set -gx PATH ~/.jenv/bin $PATH
+  jenv init - | source
+end
+
 set -gx LLVM "/usr/local/opt/llvm/bin"
